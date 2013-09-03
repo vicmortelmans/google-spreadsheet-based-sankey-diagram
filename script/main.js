@@ -126,13 +126,34 @@
 	
 	  //set up graph in same style as original example but empty
 	  graph = {"nodes" : [], "links" : []};
-		if (p['output'] != undefined){
+		if (p['output'] == 1){
 			for (i=0; i<data.getNumberOfRows(); i++){	
 				graph.nodes.push({ "name": data.getValue(i,0) });
 				graph.nodes.push({ "name": data.getValue(i,1) });
 				graph.links.push({ "source": data.getValue(i,0),
 								   "target": data.getValue(i,1),
 								   "value": +data.getValue(i,2) });
+			}	
+		} else if (p['output'] == 2){
+			for (i=0; i<data.getNumberOfRows(); i++){	
+				if (data.getValue(i,3)) {
+				graph.nodes.push({ "name": data.getValue(i,0) });
+					graph.nodes.push({ "name": data.getValue(i,3) });
+					graph.links.push({ "source": data.getValue(i,0),
+								   "target": data.getValue(i,3),
+								   "value": +data.getValue(i,2) });
+					graph.nodes.push({ "name": data.getValue(i,3) });
+					graph.nodes.push({ "name": data.getValue(i,1) });
+				graph.links.push({ "source": data.getValue(i,3),
+								   "target": data.getValue(i,1),
+								   "value": +data.getValue(i,2) });
+				} else {
+					graph.nodes.push({ "name": data.getValue(i,0) });
+					graph.nodes.push({ "name": data.getValue(i,1) });
+				graph.links.push({ "source": data.getValue(i,0),
+								   "target": data.getValue(i,1),
+								   "value": +data.getValue(i,2) });
+				}
 			}	
 		} else if (p['tq'] != undefined) {
 			var d = {};
