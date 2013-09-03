@@ -5,7 +5,7 @@ My patch of an existing google spreadsheet based sankey (alluvial) diagram rende
 
 Example of calling this page:
 
-http://vicmortelmans.github.io/google-spreadsheet-based-sankey-diagram/index.html?key=0Au659FdpCliwdHJNU01nZWwxcG1mZjJGMDlFbDJaR0E&gid=3&tq=select%20A,B,C&title=Financieel%20model%20Kerkbestuur%20en%20Parochiale%20Werken&output=1
+http://vicmortelmans.github.io/google-spreadsheet-based-sankey-diagram/index.html?key=0Au659FdpCliwdHJNU01nZWwxcG1mZjJGMDlFbDJaR0E&gid=4&tq=select%20A,B,C,D&title=Financieel%20model%20Kerkbestuur%20en%20Parochiale%20Werken&output=2
 
 There are three types of data that can be used as source:
 
